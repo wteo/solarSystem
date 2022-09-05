@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+        <script src="./components/Quotes.js" defer></script>
+        <script src="./app.js" defer></script>
+    </head>
+    <body>
+        <div id="app">
+            <label>First Name</label>
+            <input type="text" v-model="firstName" />
+            <label>Last Name</label>
+            <input type="text" v-model="lastName" />
+            <p>I, {{ fullName }}, agree to sign on this contract.</p>
+            <p>Number of times renderred: {{ count }}</p>
+            <button v-on:click="reset">Reset</button>
+        </div>
+    </body>
+</html>
+
