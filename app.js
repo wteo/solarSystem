@@ -17,7 +17,13 @@ const app = new Vue({
                 this.firstName = firstName;
                 this.lastName = lastName;
             }
-        }
+        },
+        p: function() {
+            return {
+                color: 'blue',
+                'font-size': '150%',
+            }
+        },
     },
     watch: {
         fullName: function() {
@@ -31,7 +37,7 @@ const app = new Vue({
         reset: function() {
             this.firstName = '';
             this.lastName = '';
-            this.count = -1;
+            this.count = 0;
         }
     }
 });

@@ -6,9 +6,9 @@
         <script src="./app.js" defer></script>
     </head>
     <body>
-        <div id="app">
+        <div id="app" v-bind:style="p">
             <label>First Name</label>
-            <input type="text" v-model="firstName" />
+            <input type="text" v-model="firstName"/>
             <label>Last Name</label>
             <input type="text" v-model="lastName" />
             <p>I, {{ fullName }}, agree to sign on this contract.</p>
