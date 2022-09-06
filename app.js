@@ -1,46 +1,66 @@
 const app = new Vue({
     el: '#app',
     data: {
-        firstName: '',
-        lastName: '',
-        prevFullName: '',
-        currentFullName: '',
-        count: 0,
+        username: '',
+        password: '',
+        passwordConfirmation: '',
+        submitted: false,
     },
     computed: {
-        fullName: {
-            get: function() {
-                return `${this.firstName} ${this.lastName}`;
-                },
-            set: function(newFullName) {
-                const [firstName, lastName] = newFullName.split(' ');
-                this.firstName = firstName;
-                this.lastName = lastName;
+        isUsernameValid: function() {
+            if (this.username.length >= 5) {
+                return true;
+            }
+            return false;
+        },
+        isPasswordMatched: function() {
+            if (this.password === this.passwordConfirmation) {
+                return true;
+            }
+            return false;
+        },
+        passwordLength: function() {
+            if (this.password.length >= 6 && this.password.length <= 12) {
+                return true;
+            }
+            return false;
+        },
+        isFormValid: function() {
+            if (this.isPasswordMatched && this.passwordLength && this.isUsernameValid) {
+                return true;
+            }
+            this.submitted = false;
+            return false;
+        },
+        feedback: function() {
+            if (!this.isUsernameValid) {
+                return 'Invalid username. Username must have at least 5 characters';
+            } else if (!this.isPasswordMatched) {
+                return 'Password not matched!';
+            } else if (!this.passwordLength) {
+                return 'Password characters must be between 6 to 12 characters.';
+            } else {
+                return 'Login Successful!';
             }
         },
-        p: function() {
-            return {
-                color: 'blue',
-                'font-size': '150%',
+        submitHandler: function() {
+            if (!this.isUsernameValid) {
+                this.resetUserName();
+                this.submitted = true;
+            } 
+            if (!this.isPasswordMatched || !this.passwordLength) {
+                this.resetPassword();
+                this.submitted = true;
             }
         },
-    },
-    watch: {
-        fullName: function() {
-            this.increment();
-        }
     },
     methods: {
-        increment: function() {
-            this.count++;
+        resetPassword: function() {
+            this.password='';
+            this.passwordConfirmation='';
         },
-        reset: function() {
-            this.firstName = '';
-            this.lastName = '';
-            this.count = 0;
+        resetUserName: function() {
+            this.username='';
         }
     }
 });
-
-
-
