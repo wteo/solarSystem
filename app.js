@@ -3,64 +3,62 @@ const app = new Vue({
     data: {
         username: '',
         password: '',
-        passwordConfirmation: '',
-        submitted: false,
+        isSubmitted: false,
+        style: {
+            form: 'form'
+        },
+        errors: {
+            invalidUsername: 'Username too short.',
+            invalidPassword: 'Password must be between 6 to 12 characters.'
+        }
     },
     computed: {
         isUsernameValid: function() {
             if (this.username.length >= 5) {
+                this.setIsSubmitted(false);
                 return true;
             }
             return false;
         },
-        isPasswordMatched: function() {
-            if (this.password === this.passwordConfirmation) {
-                return true;
-            }
-            return false;
-        },
-        passwordLength: function() {
+        isPasswordValid: function() {
             if (this.password.length >= 6 && this.password.length <= 12) {
+                this.setIsSubmitted(false);
                 return true;
             }
             return false;
         },
         isFormValid: function() {
-            if (this.isPasswordMatched && this.passwordLength && this.isUsernameValid) {
-                return true;
-            }
-            this.submitted = false;
-            return false;
+            return this.isPasswordValid && this.isUsernameValid;
         },
         feedback: function() {
             if (!this.isUsernameValid) {
-                return 'Invalid username. Username must have at least 5 characters';
-            } else if (!this.isPasswordMatched) {
-                return 'Password not matched!';
-            } else if (!this.passwordLength) {
-                return 'Password characters must be between 6 to 12 characters.';
-            } else {
-                return 'Login Successful!';
+                return this.errors.invalidUsername;
             }
+            if (!this.isPasswordValid) {
+                return this.errors.invalidPassword;
+            }
+            return '';
         },
         submitHandler: function() {
-            if (!this.isUsernameValid) {
+            this.setIsSubmitted(true);
+            if (this.feedback === this.errors.invalidUsername) {
                 this.resetUserName();
-                this.submitted = true;
-            } 
-            if (!this.isPasswordMatched || !this.passwordLength) {
                 this.resetPassword();
-                this.submitted = true;
             }
-        },
+            if (this.feedback === this.errors.invalidPassword) {
+                this.resetPassword();
+            }
+        }
     },
     methods: {
         resetPassword: function() {
-            this.password='';
-            this.passwordConfirmation='';
+            this.password = '';
         },
         resetUserName: function() {
-            this.username='';
+            this.username = '';
+        },
+        setIsSubmitted: function(boolean) {
+            this.isSubmitted = boolean;
         }
     }
 });
