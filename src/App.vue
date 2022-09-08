@@ -1,9 +1,15 @@
 <script>
 
-import Planets from './components/Planets.vue';
+import Description from './components/Description.vue';
+import Sun from './components/Sun.vue';
+import InnerPlanets from './components/InnerPlanets.vue';
+import AsteroidBelt from './components/AsteroidBelt.vue';
+import OuterPlanets from './components/OuterPlanets.vue';
+
 
 export default {
-  components: { Planets }
+  components: { Description, Sun, InnerPlanets, AsteroidBelt, OuterPlanets },
+
 }
 
 </script>
@@ -12,9 +18,12 @@ export default {
 
   <h1>The Solar System</h1>
   <div class="solarSystemContainer">
-    <div id="sun" />
-    <Planets />
+    <Sun />
+    <InnerPlanets />
+    <AsteroidBelt />
+    <OuterPlanets />
   </div>
+
 
 </template>
 
@@ -49,15 +58,22 @@ h1 {
   width: 100%;
 }
 
-#sun {
-  position: absolute;
-  top: 230px;
-  left: 230px;
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  background-color: orange;
-  z-index: 100;
+#sun:hover, #asteroid-belt:hover, .planet:hover, .clicked {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px white; 
 }
+
+@keyframes orbiting {
+    0% {
+        transform: rotate(135deg);
+    }
+    50% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(495deg);
+    }
+  }
+  
 
 </style>
