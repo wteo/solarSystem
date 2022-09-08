@@ -1,28 +1,13 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
-        <script src="./app.js" defer></script>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div id="app">
-            <form v-if="!isFormValid || !isSubmitted" v-on:submit.prevent="submitHandler">
-                <label>Username</label>
-                <input type="text" v-model="username" v-bind:class="[style.form, { invalid : !isUsernameValid && isSubmitted }]"/>
-                <br/>
-                <label>Password</label>
-                <input type="text" v-model="password" v-bind:class="[style.form, { invalid : !isPasswordValid && isSubmitted }]"/>
-                <br/>
-                <button type="submit">Login</button>
-            </form>
-            <div v-if="isSubmitted">
-                <p v-if="!isFormValid" v-bind:style="{ color: 'red', padding: '0px 50px'}">{{ feedback }}</p>
-                <div v-if="isFormValid">
-                    <p>You are now logged in!</p>
-                    <button>Logout</button> 
-                </div>
-            </div>
-        </div>
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./solarSystem.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Solar System</title>
+    <script type="module" src="/src/main.js" defer></script>
+  </head>
+  <body id="body">
+    <div id="app"></div>
+  </body>
 </html>
