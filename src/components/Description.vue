@@ -12,12 +12,14 @@ export default {
 
 
 <template>
-    <div class="description_box">
+
+    <div>
         <button class="close-button" @click="closeHandler">X</button>
         <div class="description">
             <slot />
         </div>
     </div>
+
 </template>
 
 

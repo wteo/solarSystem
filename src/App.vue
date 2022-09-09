@@ -50,6 +50,18 @@ h1 {
   color: var(--font-color);
 }
 
+/* Animation for box description */
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.25s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+  transform: translateY(-20%);
+}
+
 .solarSystemContainer {
   position: fixed;
   top: 20px;

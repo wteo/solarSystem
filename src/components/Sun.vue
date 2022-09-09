@@ -20,10 +20,12 @@ export default {
 
 <template>
 
-    <Description v-if="isClicked" @closeHandler="clickHandler">
-      <h3>Sun</h3>
-      <p>Our star!</p>
-    </Description>
+    <Transition>
+      <Description v-if="isClicked" @closeHandler="clickHandler">
+        <h3>Sun</h3>
+        <p>Our star!</p>
+      </Description>
+    </Transition>
     <div id="sun" @click="clickHandler" :class="{ clicked : isClicked }"/>
 
 </template>

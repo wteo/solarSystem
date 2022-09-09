@@ -22,10 +22,12 @@ export default {
 
 <template>
 
-  <Description v-if="isClicked" @closeHandler="clickHandler">
-    <h3>{{`${planet.charAt(0).toUpperCase()}${planet.slice(1)}`}}</h3>
-    <p>{{ description }}</p>
-  </Description>
+  <Transition>
+    <Description v-if="isClicked" @closeHandler="clickHandler">
+      <h3>{{`${planet.charAt(0).toUpperCase()}${planet.slice(1)}`}}</h3>
+      <p>{{ description }}</p>
+    </Description>
+  </Transition>
   <div :id="orbit" class="orbit">
     <div :id="planet" :class="{ planet : !isClicked, 'planet clicked' : isClicked }">
       <img class="planet-image" @click="clickHandler" :src="imgLink" :alt="planet" />
