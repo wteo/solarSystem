@@ -30,7 +30,7 @@ export default {
   </Transition>
   <div :id="orbit" class="orbit">
     <div :id="planet" :class="{ planet : !isClicked, 'planet clicked' : isClicked }">
-      <img class="planet-image" @click="clickHandler" :src="imgLink" :alt="planet" />
+      <img class="image" @click="clickHandler" :src="imgLink" :alt="planet" />
     </div>
   </div> 
 
@@ -39,17 +39,6 @@ export default {
 
 <style>
 
-.orbit {
-    position: absolute;
-    border: var(--orbit-border);
-    border-radius: 100%;
-}
-
-.planet-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;  
-}
 
 .planet {
     position: relative;

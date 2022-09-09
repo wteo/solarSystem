@@ -33,7 +33,7 @@ export default {
 * {
   box-sizing: border-box;
   --space-background-color: rgb(22, 16, 58);
-  --orbit-border: 2px #4A437F dashed;
+  --orbit-border: 2px #2b2369 dashed;
   --font-color: white;
 }
 
@@ -68,6 +68,18 @@ h1 {
   left: 20px;
   height: 100%;
   width: 100%;
+}
+
+.orbit {
+    position: absolute;
+    border: var(--orbit-border);
+    border-radius: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;  
 }
 
 #sun:hover, #asteroid-belt:hover, .planet:hover, .clicked {

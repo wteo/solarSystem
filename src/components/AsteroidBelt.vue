@@ -2,10 +2,13 @@
 
 import Description from './Description.vue';
 
+import asteroid from './images/asteroid.png';
+
 export default {
   data() {
     return {
       isClicked: false,
+      imgLink: asteroid
     }
   },
   components: { Description },
@@ -26,7 +29,9 @@ export default {
         <p>The asteroid belt that separate our inner planets from the outer planets</p>
       </Description>
     </Transition>
-    <div :class="{ orbit : !isClicked, 'orbit clicked' : isClicked }" id="asteroid-belt" @click="clickHandler" />
+    <div :class="{ orbit : !isClicked, 'orbit clicked' : isClicked }" id="asteroid-belt" >
+      <img class="image" @click="clickHandler" :src="imgLink" alt="asteroid belt" />
+    </div>
 
 </template>
 
@@ -34,11 +39,11 @@ export default {
 
 /* Asteroid Belt */
 #asteroid-belt {
-    top: -10px;
-    left: 40px;
-    width: 625px;
-    height: 625px;
-    border: 10px solid gray;
+    top: -70px;
+    left: -30px;
+    width: 750px;
+    height: 750px;
+    border: 0px solid transparent;
     animation: orbiting 100s linear infinite;
     z-index: 50;
 }
