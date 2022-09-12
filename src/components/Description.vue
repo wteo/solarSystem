@@ -33,7 +33,7 @@ export default {
     width: 60%;
     z-index: 200;
     border-radius: 10px;
-    padding: 3px 30px;
+    padding: 3px 2%;
 }
 
 .close-button {
@@ -52,7 +52,6 @@ export default {
     cursor:pointer;
     background-color: var(--font-color);
 }
-
 
 @media only screen and (max-width: 1200px) {
     .close-button {
@@ -79,7 +78,7 @@ export default {
     }
 }
 
-@media only screen and (max-width: 675px) {    
+@media only screen and (max-width: 675px) {   
     .close-button {
         left: 55.5%;
     }
@@ -90,5 +89,6 @@ export default {
         left: 54%;
     }
 }
+
 
 </style>
