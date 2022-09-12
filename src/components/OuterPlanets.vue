@@ -108,8 +108,8 @@ export default {
 
 /* Neptune */
 #neptune-orbit {
-    top: -34vw;
-    left: -28vw;
+    top: -32vw;
+    left: -27vw;
     width: 120vw;
     height: 120vw;
     animation: orbiting 180s linear infinite;
