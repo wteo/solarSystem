@@ -30,7 +30,7 @@ export default {
     top: 60px;
     background-color: rgba(1, 77, 116, 0.7);
     color: var(--font-color);
-    width: 500px;
+    width: 450px;
     z-index: 200;
     border-radius: 10px;
     padding: 3px 30px;
@@ -39,7 +39,7 @@ export default {
 .close-button {
     position: relative;
     top: 85px;
-    left: 470px;
+    left: 422.5px;
     background-color: transparent;
     color: var(--font-color);
     border: 1px solid var(--font-color);

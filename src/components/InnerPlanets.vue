@@ -65,9 +65,9 @@ export default {
 
 #mercury {
     top: 2vw;
-    left: 2.5vw;
-    height: 1.5vw;
-    width: 1.5vw;
+    left: 1.8vw;
+    height: 2.2vw;
+    width: 2.2vw;
 }
 
 
@@ -83,9 +83,9 @@ export default {
 
 #venus {
     top: 2vw;
-    left: 3.75vw;
-    height: 2.5vw;
-    width: 2.5vw;
+    left: 3vw;
+    height: 3vw;
+    width: 3vw;
 }
 
 
@@ -101,9 +101,9 @@ export default {
 
 #earth {
     top: 3.0vw;
-    left: 4.5vw;
-    height: 2.7vwpx;
-    width: 2.7vw;
+    left: 4.1vw;
+    height: 3.2vw;
+    width: 3.2vw;
 }
 
 
@@ -119,9 +119,9 @@ export default {
   
 #mars {
     top: 10vw;
-    left: 1.25vw;
-    height: 2.3vw;
-    width: 2.3vw;
+    left: 1vw;
+    height: 2.5vw;
+    width: 2.5vw;
 }
 
 </style>

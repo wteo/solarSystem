@@ -33,14 +33,12 @@ export default {
 * {
   box-sizing: border-box;
   --space-background-color: rgb(22, 16, 58);
-  --orbit-border: 0.1em #2b2369 dashed;
+  --orbit-border: 0.1vw #2b2369 dashed;
   --font-color: white;
 }
 
 #body {
   background-color: var(--space-background-color);
-  width: 1800px;
-  height: 900px;
 }
 
 h1 {
@@ -66,8 +64,8 @@ h1 {
 
 .solarSystemContainer {
   position: fixed;
-  top: 1vw;
-  left: 3vw;
+  top: 15px;
+  left: 20px;
   height: 100%;
   width: 100%;
 }
@@ -86,7 +84,7 @@ h1 {
 
 #sun:hover, #asteroid-belt:hover, .planet:hover, .clicked {
     cursor: pointer;
-    box-shadow: 0px 0px 20px white; 
+    box-shadow: 0vw 0vw 2vw white; 
 }
 
 @keyframes orbiting {
