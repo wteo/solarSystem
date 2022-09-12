@@ -39,10 +39,10 @@ export default {
 
 /* Asteroid Belt */
 #asteroid-belt {
-    top: -70px;
-    left: -30px;
-    width: 750px;
-    height: 750px;
+    top: -2.5vw;
+    left: 0.5vw;
+    width: 57vw;
+    height: 57vw;
     border: 0px solid transparent;
     animation: orbiting 100s linear infinite;
     z-index: 50;

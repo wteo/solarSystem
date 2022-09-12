@@ -40,10 +40,10 @@ export default {
 
 #sun {
   position: absolute;
-  top: 230px;
-  left: 230px;
-  width: 150px;
-  height: 150px;
+  top: 19.75vw;
+  left: 21.75vw;
+  width: 13.5w;
+  height: 13.5vw;
   border-radius: 100%;
   background-color: orange;
   z-index: 100;

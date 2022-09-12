@@ -55,73 +55,73 @@ export default {
 
 /* Mercury */
 #mercury-orbit {
-    top: 205px;
-    left: 210px;
-    width: 200px;
-    height: 200px;
+    top: 16vw;
+    left: 18vw;
+    width: 21vw;
+    height: 21vw;
     animation: orbiting 20s linear infinite;
     z-index: 90;
 }
 
 #mercury {
-    top: 65px;
-    left: -5px;
-    height: 15px;
-    width: 15px;
+    top: 2vw;
+    left: 2.5vw;
+    height: 1.5vw;
+    width: 1.5vw;
 }
 
 
 /* Venus */
 #venus-orbit {
-    top: 150px;
-    left: 165px;
-    width: 300px;
-    height: 300px;
+    top: 12.25vw;
+    left: 14.5vw;
+    width: 28vw;
+    height: 28vw;
     animation: orbiting 40s linear infinite;
     z-index: 80;
 }
 
 #venus {
-    top: 65px;
-    left: -4px;
-    height: 35px;
-    width: 35px;
+    top: 2vw;
+    left: 3.75vw;
+    height: 2.5vw;
+    width: 2.5vw;
 }
 
 
 /* Earth */
 #earth-orbit {
-    top: 100px;
-    left: 120px;
-    width: 400px;
-    height: 400px;
+    top: 9.0vw;
+    left: 11.0vw;
+    width: 35.0vw;
+    height: 35.0vw;
     animation: orbiting 60s linear infinite;
     z-index: 70;
 }
 
 #earth {
-    top: 80px;
-    left: 6.5px;
-    height: 37.5px;
-    width: 37.5px;
+    top: 3.0vw;
+    left: 4.5vw;
+    height: 2.7vwpx;
+    width: 2.7vw;
 }
 
 
 /* MARS */
 #mars-orbit {
-    top: 55px;
-    left: 80px;
-    width: 500px;
-    height: 500px;
+    top: 5.25vw;
+    left: 7.5vw;
+    width: 42.5vw;
+    height: 42.5vw;
     animation: orbiting 80s linear infinite;
     z-index: 60;
 }
   
 #mars {
-    top: 147.5px;
-    left: 2px;
-    height: 27.5px;
-    width: 27.5px;
+    top: 10vw;
+    left: 1.25vw;
+    height: 2.3vw;
+    width: 2.3vw;
 }
 
 </style>

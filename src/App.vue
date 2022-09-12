@@ -33,12 +33,14 @@ export default {
 * {
   box-sizing: border-box;
   --space-background-color: rgb(22, 16, 58);
-  --orbit-border: 2px #2b2369 dashed;
+  --orbit-border: 0.1em #2b2369 dashed;
   --font-color: white;
 }
 
 #body {
   background-color: var(--space-background-color);
+  width: 1800px;
+  height: 900px;
 }
 
 h1 {
@@ -64,8 +66,8 @@ h1 {
 
 .solarSystemContainer {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 1vw;
+  left: 3vw;
   height: 100%;
   width: 100%;
 }
@@ -89,13 +91,13 @@ h1 {
 
 @keyframes orbiting {
     0% {
-        transform: rotate(135deg);
+        transform: rotate(115deg);
     }
     50% {
-        transform: rotate(315deg);
+        transform: rotate(295deg);
     }
     100% {
-        transform: rotate(495deg);
+        transform: rotate(475deg);
     }
   }
   

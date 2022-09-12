@@ -55,72 +55,72 @@ export default {
 
 /* Jupiter */
 #jupiter-orbit {
-    top: -140px;
-    left: -80px;
-    width: 900px;
-    height: 900px;
+    top: -7vw;
+    left: -4vw;
+    width: 68vw;
+    height: 68vw;
     animation: orbiting 120s linear infinite;
     z-index: 40;
 }
   
 #jupiter {
-    top: 125px;
-    left: 42.5px;
-    height: 100px;
-    width: 100px;
+    top: 11vw;
+    left: 3vw;
+    height: 7vw;
+    width: 7vw;
 }
 
 
 /* Saturn */
 #saturn-orbit {
-    top: -300px;
-    left: -180px;
-    width: 1200px;
-    height: 1200px;
+    top: -15vw;
+    left: -11vw;
+    width: 85vw;
+    height: 85vw;
     animation: orbiting 140s linear infinite;
     z-index: 30;
 }
   
 #saturn {
-    top: 210px;
-    left: -30px;
-    height: 200px;
-    width: 200px;
+    top: 9vw;
+    left: 2vw;
+    height: 14vw;
+    width: 14vw;
 }
 
 
 /* Uranus */
 #uranus-orbit {
-    top: -450px;
-    left: -300px;
-    width: 1500px;
-    height: 1500px;
+    top: -22.5vw;
+    left: -17vw;
+    width: 100vw;
+    height: 100vw;
     animation: orbiting 160s linear infinite;
     z-index: 20;
 }
   
 #uranus {
-    top: 300px;
-    left: 95px;
-    height: 65px;
-    width: 65px;
+    top: 20.5vw;
+    left: 6vw;
+    height: 4vw;
+    width: 4vw;
 }
 
 /* Neptune */
 #neptune-orbit {
-    top: -600px;
-    left: -430px;
-    width: 1800px;
-    height: 1800px;
+    top: -34vw;
+    left: -28vw;
+    width: 120vw;
+    height: 120vw;
     animation: orbiting 180s linear infinite;
     z-index: 10;
 }
   
 #neptune {
-    top: 405px;
-    left: 95px;
-    height: 60px;
-    width: 60px;
+    top: 22.5vw;
+    left: 9.5vw;
+    height: 3.8vw;
+    width: 3.8vw;
 }
 
 </style>
