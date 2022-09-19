@@ -34,19 +34,3 @@ export default {
     </div>
 
 </template>
-
-
-<style>
-
-#sun {
-  position: absolute;
-  top: 19.75vw;
-  left: 21.75vw;
-  width: 13.5w;
-  height: 13.5vw;
-  border-radius: 100%;
-  background-color: orange;
-  z-index: 100;
-} 
-
-</style>

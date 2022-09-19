@@ -1,0 +1,85 @@
+@import 'helpers/mixins';
+@import 'helpers/variables';
+@import 'helpers/animations';
+@import 'helpers/placeholders';
+
+* {
+    box-sizing: border-box;
+}
+  
+#body {
+
+    background-color: $space-background-color;
+
+    h1 {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 300%;
+        z-index: 200;
+        color: $font-color;
+    }
+
+    .solarSystemContainer {
+        @include position(15px, 20px, 100%, 100%);
+        position: fixed;
+
+        @each $planet, $top, $left, $width, $height, $duration, $z-index in $planet-orbits {
+            ##{$planet}-orbit {
+              @include orbit($top, $left, $width, $height, $duration, $z-index);
+            }
+        }
+    
+        .image {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;  
+        }
+
+        #sun {
+            @include position(19.75vw, 21.75vw, 13.5vw, 13.5vw);
+            position: absolute;
+            border-radius: 100%;
+            background-color: orange;
+            z-index: 100;
+          
+            &:hover {
+              @extend %clicked;
+            }  
+        }
+        
+        #asteroid-belt {
+            animation: orbiting 100s linear infinite;
+            @include orbit(-2.5vw, 0.5vw, 57vw, 57vw, 100s, 50);
+        
+            &:hover {
+              @extend %clicked;
+            }
+        }
+
+        .orbit {
+            position: absolute;
+            border: $orbit-border;
+            border-radius: 100%;
+
+            @each $planet, $top, $left, $height, $width in $planet-positions {
+                ##{$planet} {
+                  @include position($top, $left, $height, $width);
+                }
+            }
+
+            .planet {
+                position: relative;
+                border-radius: 100%;
+                transition: box-shadow 0.25s;
+            
+                &:hover {
+                  @extend %clicked;
+                }
+            }            
+        }
+    }
+}
+
+
+

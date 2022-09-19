@@ -23,13 +23,15 @@ export default {
 </template>
 
 
-<style>
+<style lang="scss">
+
+@import '@/scss/helpers/variables';
 
 .description {
     position: relative;
     top: 60px;
     background-color: rgba(1, 77, 116, 0.7);
-    color: var(--font-color);
+    color: $font-color;
     width: 60%;
     z-index: 200;
     border-radius: 10px;
@@ -41,54 +43,24 @@ export default {
     top: 85px;
     left: 58%;
     background-color: transparent;
-    color: var(--font-color);
-    border: 1px solid var(--font-color);
+    color: $font-color;
+    border: 1px solid $font-color;
     border-radius: 5px;
     z-index: 250;
     transition: background-color 0.25s;
-}
 
-.close-button:hover {
-    cursor:pointer;
-    background-color: var(--font-color);
-}
-
-@media only screen and (max-width: 1200px) {
-    .close-button {
-        left: 57.5%;
+    &:hover {
+        cursor:pointer;
+        background-color: $font-color;
     }
 }
 
-@media only screen and (max-width: 1000px) {    
-    .close-button {
-        left: 57%;
+@each $width, $percentage in $screen-widths {
+    @media only screen and (max-width: $width) {
+        .close-button {
+            left: $percentage;
+        }
     }
 }
-
-@media only screen and (max-width: 850px) {    
-    .close-button {
-        left: 56.5%;
-    }
-}
-
-
-@media only screen and (max-width: 700px) {    
-    .close-button {
-        left: 56%;
-    }
-}
-
-@media only screen and (max-width: 675px) {   
-    .close-button {
-        left: 55.5%;
-    }
-}
-
-@media only screen and (max-width: 550px) {    
-    .close-button {
-        left: 54%;
-    }
-}
-
 
 </style>

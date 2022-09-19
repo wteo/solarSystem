@@ -37,13 +37,18 @@ export default {
 </template>
 
 
-<style>
+<style lang="scss">
 
+@import '@/scss/helpers/placeholders';
 
 .planet {
     position: relative;
     border-radius: 100%;
     transition: box-shadow 0.25s;
+
+    &:hover {
+      @extend %clicked;
+    }
 }
 
 </style>

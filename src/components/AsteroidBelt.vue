@@ -34,18 +34,3 @@ export default {
     </div>
 
 </template>
-
-<style>
-
-/* Asteroid Belt */
-#asteroid-belt {
-    top: -2.5vw;
-    left: 0.5vw;
-    width: 57vw;
-    height: 57vw;
-    border: 0px solid transparent;
-    animation: orbiting 100s linear infinite;
-    z-index: 50;
-}
-
-</style>

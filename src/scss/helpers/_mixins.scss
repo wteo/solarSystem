@@ -1,0 +1,15 @@
+@mixin orbit($top, $left, $width, $height, $duration, $z-index) {
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+    animation: orbiting $duration linear infinite;
+    z-index: $z-index;
+}
+
+@mixin position($top, $left, $height, $width) {
+    top: $top;
+    left: $left;
+    height: $height;
+    width: $width;
+}

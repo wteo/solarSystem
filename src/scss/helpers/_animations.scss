@@ -1,0 +1,24 @@
+// Animation for box description 
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.25s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+  transform: translateY(-20%);
+}
+
+
+@keyframes orbiting {
+    0% {
+        transform: rotate(115deg);
+    }
+    50% {
+        transform: rotate(295deg);
+    }
+    100% {
+        transform: rotate(475deg);
+    }
+  }
