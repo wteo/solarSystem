@@ -31,7 +31,7 @@ export default defineComponent({
 
 .description {
     position: relative;
-    top: 60px;
+    top: 80px;
     background-color: rgba(1, 77, 116, 0.7);
     color: $font-color;
     width: 60%;
@@ -42,7 +42,7 @@ export default defineComponent({
 
 .close-button {
     position: relative;
-    top: 85px;
+    top: 105px;
     left: 58%;
     background-color: transparent;
     color: $font-color;
