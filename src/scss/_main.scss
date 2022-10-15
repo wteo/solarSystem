@@ -6,18 +6,19 @@
 * {
     box-sizing: border-box;
 }
+
+.image {
+    height: 100%;
+    width: 100%;
+}
   
 #body {
 
     background-color: $space-background-color;
-
-    h1 {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        font-size: 300%;
-        z-index: 200;
-        color: $font-color;
+    
+    .image {
+        height: 100%;
+        width: 100%;
     }
 
     .solarSystemContainer {
@@ -31,8 +32,6 @@
         }
     
         .image {
-            width: 100%;
-            height: 100%;
             border-radius: 100%;  
         }
 
@@ -59,7 +58,6 @@
 
         .orbit {
             position: absolute;
-            border: $orbit-border;
             border-radius: 100%;
 
             @each $planet, $top, $left, $height, $width in $planet-positions {
@@ -80,6 +78,8 @@
         }
     }
 }
+
+
 
 
 
