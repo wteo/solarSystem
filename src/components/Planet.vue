@@ -10,7 +10,24 @@ export default defineComponent({
       isClicked: false
     }
   },
-  props: ['description', 'planet', 'orbit', 'imgLink'],
+  props: {
+    description: {
+      required: true,
+      type: String
+    },
+    planet: {
+      required: true,
+      type: String
+    },
+    orbit: {
+      required: true,
+      type: String
+    },
+    imgLink: {
+      required: true,
+      type: String
+    }
+  },
   components: { Description },
   methods: {
     clickHandler() {

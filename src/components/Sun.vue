@@ -8,7 +8,7 @@ import sun from '../images/sun.jpg';
 
 export default defineComponent({
   setup() {
-    const isClicked = ref(false);
+    const isClicked = ref<boolean>(false);
     const clickHandler = () => isClicked.value = !isClicked.value;
     return { isClicked, clickHandler, sunImage: sun };
   },
