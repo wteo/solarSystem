@@ -1,8 +1,10 @@
-<script>
+<script lang="ts">
+
+import { defineComponent, PropType } from 'vue';
 
 import Description from './Description.vue';
 
-export default {
+export default defineComponent({
   data() {
     return {
       isClicked: false
@@ -15,7 +17,7 @@ export default {
       this.isClicked = !this.isClicked;
     }
   }
-}
+})
 
 </script>
 

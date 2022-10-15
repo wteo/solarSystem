@@ -1,10 +1,12 @@
-<script>
+<script lang="ts">
+
+import { defineComponent } from 'vue';
 
 import Description from './Description.vue';
 
-import asteroid from './images/asteroid.png';
+import asteroid from '../images/asteroid.png';
 
-export default {
+export default defineComponent({
   data() {
     return {
       isClicked: false,
@@ -17,7 +19,7 @@ export default {
       this.isClicked = !this.isClicked;
     },
   }
-}
+})
 
 </script>
 

@@ -1,4 +1,7 @@
-<script>
+<script lang="ts">
+
+// To let TypeScript properly infer types inside component options
+import { defineComponent } from 'vue';
 
 import Description from './components/Description.vue';
 import Sun from './components/Sun.vue';
@@ -7,10 +10,10 @@ import AsteroidBelt from './components/AsteroidBelt.vue';
 import OuterPlanets from './components/OuterPlanets.vue';
 
 
-export default {
+export default defineComponent({
   components: { Description, Sun, InnerPlanets, AsteroidBelt, OuterPlanets },
 
-}
+})
 
 </script>
 

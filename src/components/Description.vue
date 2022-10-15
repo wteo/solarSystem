@@ -1,12 +1,14 @@
-<script>
+<script lang="ts">
 
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   methods: {
     closeHandler() {
         this.$emit('closeHandler');
     }
   }
-}
+})
 
 </script>
 

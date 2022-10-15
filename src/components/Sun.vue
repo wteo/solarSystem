@@ -1,23 +1,19 @@
-<script>
+<script lang="ts">
+
+import { defineComponent, ref } from 'vue'
 
 import Description from './Description.vue';
 
-import sun from './images/sun.jpg';
+import sun from '../images/sun.jpg';
 
-export default {
-  data() {
-    return {
-      isClicked: false,
-      sunImage: sun
-    }
+export default defineComponent({
+  setup() {
+    const isClicked = ref(false);
+    const clickHandler = () => isClicked.value = !isClicked.value;
+    return { isClicked, clickHandler, sunImage: sun };
   },
   components: { Description },
-  methods: {
-    clickHandler() {
-      this.isClicked = !this.isClicked;
-    },
-  }
-}
+})
 
 </script>
 
