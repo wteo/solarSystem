@@ -1,6 +1,7 @@
 <script lang="ts">
 
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref } from 'vue';
+import { APIKey, APIHost } from '../keys/keys.js';
 
 import Description from './Description.vue';
 
@@ -13,6 +14,18 @@ export default defineComponent({
     return { isClicked, clickHandler, sunImage: sun };
   },
   components: { Description },
+  mounted() {
+    const url = 'https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planet/list';
+    fetch(url, {
+      method: 'GET',
+      headers: { 
+        'X-RapidApi-Key': APIKey,
+        'X-RapidAPI-Host': APIHost
+      },
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+  },
 })
 
 </script>
