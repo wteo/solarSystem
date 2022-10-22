@@ -1,19 +1,47 @@
 <script lang="ts">
 
-import { defineComponent, ref } from 'vue';
-// import { APIKey, APIHost } from '../keys/keys.js';
+import { defineComponent } from 'vue';
+import { url } from '../store/url.js';
 
 import Description from './Description.vue';
 
 import sun from '../images/sun.jpg';
 
 export default defineComponent({
-  setup() {
-    const isClicked = ref<boolean>(false);
-    const clickHandler = () => isClicked.value = !isClicked.value;
-    return { isClicked, clickHandler, sunImage: sun };
+  data() {
+    return {
+      name: '',
+      description: '',
+      image: sun,
+      isClicked: false,
+    }
   },
   components: { Description },
+  methods: {
+    async getData() {
+
+      const res = await fetch(url);
+      const data =  await res.json();
+
+      try {
+        if (res.status == 200) {
+          const { name, description } = data.sun;
+          this.name = name;
+          this.description = description;
+        } else {
+          throw new Error("Error: 404")
+        }
+      } catch(err: any) {
+        throw new Error(err.message);
+      }
+    },
+    clickHandler() {
+      this.isClicked = !this.isClicked;
+    }
+  },
+  mounted() {
+    this.getData();
+  }
 })
 
 </script>
@@ -22,12 +50,12 @@ export default defineComponent({
 
     <Transition>
       <Description v-if="isClicked" @closeHandler="clickHandler">
-        <h3>Sun</h3>
-        <p>Our star!</p>
+        <h3>{{ name }}</h3>
+        <p>{{ description }}</p>
       </Description>
     </Transition>
     <div id="sun" :class="{ clicked : isClicked }">
-      <img class="image" @click="clickHandler" :src="sunImage" alt="sun" />
+      <img class="image" @click="clickHandler" :src="image" alt="sun" />
     </div>
 
 </template>
