@@ -5,10 +5,8 @@ import { defineComponent } from 'vue';
 
 import Description from './components/Description.vue';
 import Sun from './components/Sun.vue';
-import InnerPlanets from './components/InnerPlanets.vue';
+import Planets from './components/Planets.vue';
 import AsteroidBelt from './components/AsteroidBelt.vue';
-import OuterPlanets from './components/OuterPlanets.vue';
-
 
 export default defineComponent({
   data() {
@@ -17,7 +15,7 @@ export default defineComponent({
       isVisible: false
     }
   },
-  components: { Description, Sun, InnerPlanets, AsteroidBelt, OuterPlanets },
+  components: { Description, Sun, Planets, AsteroidBelt },
   methods: {
     settingsHandler() {
       this.isSettingsClicked = !this.isSettingsClicked;
@@ -49,9 +47,8 @@ export default defineComponent({
   </nav>
   <div class="solarSystemContainer">
     <Sun />
-    <InnerPlanets />
+    <Planets />
     <AsteroidBelt />
-    <OuterPlanets />
   </div>
 
 </template>

@@ -49,6 +49,7 @@
         
         #asteroid-belt {
             animation: orbiting 100s linear infinite;
+            border: transparent;
             @include orbit(-2.5vw, 0.5vw, 57vw, 57vw, 100s, 50);
         
             &:hover {
