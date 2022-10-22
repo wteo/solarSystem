@@ -47,14 +47,14 @@ export default defineComponent({
           if (res.status == 200) {
 
             const data =  await res.json();
-            const planets: string[] = data.planets;
+            const planets = data.planets;
             const newArr: Planet[] = [];
             const images: string[] = [mercury, venus, earth, mars, jupiter, saturn, uranus, neptune];
 
             console.log(planets);
 
             for (let i = 0; i < planets.length; i++) {
-              const { name, description, id, basicDetails }: any = planets[i];
+              const { name, description, id, basicDetails } = planets[i];
               const { mass, volume, surfaceArea, moonCount } = basicDetails[0];
               newArr.push({
                 planet: name.toLowerCase(),
@@ -70,7 +70,7 @@ export default defineComponent({
             }
 
             this.planets = newArr;
-            console.log(this.planets);
+            // console.log(this.planets);
 
           } else {
             throw new Error("Error: 404")
