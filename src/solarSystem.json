@@ -1,8 +1,10 @@
 {
     "sun": {
+        "name": "Sun",
         "description": "Our star! It is the biggest object in our entire Solar System."
     },
     "asteroid": {
+        "name": "The Asteroid Belt",
         "description": "The asteroid belt that separates our inner planets from the outer planets."
     },
     "planets": [
