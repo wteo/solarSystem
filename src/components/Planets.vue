@@ -1,6 +1,7 @@
 <script lang="ts">
 
 import { defineComponent } from 'vue';
+import { url } from '../store/url.js';
 
 import Planet from './Planet.vue';
 
@@ -33,20 +34,17 @@ export default defineComponent({
       }
     },
     components: { Planet },
-    mounted() {
-      this.getData();        
-    },
     methods: {
+      
       async getData() {
 
-        const url = 'https://solarsystem.free.beeceptor.com/v1/';
         const res = await fetch(url);
+        const data =  await res.json();
         
         try {
 
           if (res.status == 200) {
 
-            const data =  await res.json();
             const planets = data.planets;
             const newArr: Planet[] = [];
             const images: string[] = [mercury, venus, earth, mars, jupiter, saturn, uranus, neptune];
@@ -81,7 +79,10 @@ export default defineComponent({
         }
 
       }
-    }
+    },
+    mounted() {
+      this.getData();
+    },
 })
 
 </script>
