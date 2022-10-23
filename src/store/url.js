@@ -1,2 +1,2 @@
-export const url = 'https://space7.free.beeceptor.com/';
+export const url = 'https://outinspace.free.beeceptor.com';
 //# sourceMappingURL=url.js.map

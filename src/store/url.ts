@@ -1,1 +1,1 @@
-export const url: string = 'https://solarsystem.free.beeceptor.com/v1';
+export const url: string = 'https://outinspace.free.beeceptor.com';
