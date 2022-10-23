@@ -41,7 +41,7 @@ export default defineComponent({
       animation: {
         required: true,
         type: Boolean
-      }
+      },
     },
     components: { Planet },
     methods: {

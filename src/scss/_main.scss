@@ -27,7 +27,7 @@
 
         @each $planet, $top, $left, $width, $height, $duration, $z-index in $planet-orbits {
             ##{$planet}-orbit {
-              @include orbit($top, $left, $width, $height, $duration, running, $z-index);
+                @include orbit($top, $left, $width, $height, $duration, running, $z-index);
             }
             ##{$planet}-orbit-paused {
                 @include orbit($top, $left, $width, $height, $duration, paused, $z-index);

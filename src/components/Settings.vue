@@ -10,6 +10,7 @@ export default defineComponent({
         isVisible: false,
         image: settings,
         play: false,
+        speed: 'normal',
     }
   },
   methods: {
@@ -18,11 +19,11 @@ export default defineComponent({
     },
     orbitHandler() {
       this.isVisible = !this.isVisible;
-      this.$emit('clicked', { orbit: this.isVisible, animation: this.play });
+      this.$emit('clicked', { orbit: this.isVisible, animation: this.play, speed: this.speed });
     },
     animationHandler() {
       this.play = !this.play;
-      this.$emit('clicked', { orbit: this.isVisible, animation: this.play });
+      this.$emit('clicked', { orbit: this.isVisible, animation: this.play, speed: this.speed });
     },
   }
 })
@@ -42,14 +43,6 @@ export default defineComponent({
           <div @click="orbitHandler" class="options">
             <span class="on" v-if="isVisible">On</span>
             <span class="off" v-if="!isVisible">Off</span>
-          </div>
-        </li>
-        <li>
-          <span class="settings-label">Speed</span>
-          <div class="options">
-            <span class="speed">Slow</span>
-            <span class="speed">Normal</span>
-            <span class="speed">Fast</span>
           </div>
         </li>
         <li>
@@ -130,13 +123,6 @@ export default defineComponent({
 
             .off {
                 color: $notSelected;
-            }
-
-            .speed {
-                transition: all 0.2s;
-                &:hover {
-                    color: $selected;
-                }
             }
         }
       }

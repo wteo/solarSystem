@@ -50,7 +50,7 @@ export default defineComponent({
     animation: {
       required: true,
       type: Boolean
-    }
+    },
   },
   components: { Description },
   methods: {
@@ -81,7 +81,7 @@ export default defineComponent({
       </div>
     </Description>
   </Transition>
-  <div :id="`${ orbit }${ animation ? '-paused' : '' }`" :class="[ visibility ? 'orbit hidden' : 'orbit visible' ]">
+  <div :id="`${ orbit }${ animation ? '-paused' : ''}`" :class="[ visibility ? 'orbit hidden' : 'orbit visible' ]">
     <div :id="planet" :class="{ planet : !isClicked, 'planet clicked' : isClicked}">
       <img class="image" @click="clickHandler" :src="imgLink" :alt="planet" />
     </div>
