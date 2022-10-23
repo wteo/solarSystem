@@ -18,7 +18,7 @@ export default defineComponent({
     },
     orbitHandler() {
       this.isVisible = !this.isVisible;
-      this.$emit('clicked', this.isVisible)
+      this.$emit('clicked', this.isVisible);
     },
     animationHandler() {
         this.play = !this.play;
@@ -75,6 +75,10 @@ export default defineComponent({
 
   .seen {
     border: $orbit-hidden;
+  }
+
+  .paused {
+    animation-play-state: paused;
   }
 
   $selected: rgb(255, 255, 255);

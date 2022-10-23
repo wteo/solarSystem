@@ -18,9 +18,9 @@ export default defineComponent({
   components: { Settings, Description, Sun, Planets, AsteroidBelt },
   methods: {
     onHide(value: boolean) {
-      console.log(value);
+      // console.log(value);
       this.isHidden = value;
-    }
+    },
   },
 })
 
