@@ -1,5 +1,6 @@
 $space-background-color: rgb(22, 16, 58);
-$orbit-border: 0.1vw #2b2369 dashed;
+$orbit-border: 0.1vw dashed #2b2369;
+$orbit-hidden: 0.1vw dashed transparent;
 $font-color: white;
 // variable to determine position of close button depending on width of screen 
 $screen-widths: (1200px, 57.5%), (1000px, 57%), (850px, 56.5%), (700px, 56%), (675px, 55.5%), (550px, 54%);
