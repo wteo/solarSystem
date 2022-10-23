@@ -13,13 +13,16 @@ export default defineComponent({
   data() {
     return {
       isHidden: false,
+      isPaused: false,
     }
   },
   components: { Settings, Description, Sun, Planets, AsteroidBelt },
   methods: {
-    onHide(value: boolean) {
-      // console.log(value);
-      this.isHidden = value;
+    dataHandler(value: any) {
+      const { orbit, animation } = value;
+      console.log(orbit, animation);
+      this.isHidden = orbit;
+      this.isPaused = animation;
     },
   },
 })
@@ -28,11 +31,11 @@ export default defineComponent({
 
 <template>
 
-  <Settings @clicked="onHide"/>
+  <Settings @clicked="dataHandler"/>
   <div class="solarSystemContainer">
     <Sun />
-    <Planets :hide="isHidden" />
-    <AsteroidBelt />
+    <Planets :visibility="isHidden" :animation="isPaused"/>
+    <AsteroidBelt :animation="isPaused" />
   </div>
   <div id="play-box">
     <audio controls autoplay>

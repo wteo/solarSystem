@@ -1,9 +1,10 @@
-@mixin orbit($top, $left, $width, $height, $duration, $z-index) {
+@mixin orbit($top, $left, $width, $height, $duration, $animation, $z-index) {
     top: $top;
     left: $left;
     width: $width;
     height: $height;
     animation: orbiting $duration linear infinite;
+    animation-play-state: $animation;
     z-index: $z-index;
 }
 

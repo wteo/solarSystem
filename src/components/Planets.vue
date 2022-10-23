@@ -34,7 +34,11 @@ export default defineComponent({
       }
     },
     props: {
-      hide: {
+      visibility: {
+        required: true,
+        type: Boolean
+      },
+      animation: {
         required: true,
         type: Boolean
       }
@@ -106,7 +110,8 @@ export default defineComponent({
     :volume="planet.volume"
     :surfaceArea="planet.surfaceArea"
     :moonCount="planet.moonCount"
-    :hide="hide"
+    :visibility="visibility"
+    :animation="animation"
   />
 
 </template>

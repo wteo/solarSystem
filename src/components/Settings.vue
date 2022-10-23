@@ -18,11 +18,12 @@ export default defineComponent({
     },
     orbitHandler() {
       this.isVisible = !this.isVisible;
-      this.$emit('clicked', this.isVisible);
+      this.$emit('clicked', { orbit: this.isVisible, animation: this.play });
     },
     animationHandler() {
-        this.play = !this.play;
-    }
+      this.play = !this.play;
+      this.$emit('clicked', { orbit: this.isVisible, animation: this.play });
+    },
   }
 })
 
@@ -73,7 +74,7 @@ export default defineComponent({
     border: $orbit-border;
   }
 
-  .seen {
+  .hidden {
     border: $orbit-hidden;
   }
 

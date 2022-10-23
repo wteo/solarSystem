@@ -16,6 +16,12 @@ export default defineComponent({
       image: asteroid
     }
   },
+  props: {
+    animation: {
+      required: true,
+      type: Boolean
+    }
+  }, 
   components: { Description },
   methods: {
     async getData() {
@@ -54,7 +60,10 @@ export default defineComponent({
         <p>{{ description }}</p>
       </Description>
     </Transition>
-    <div :class="{ orbit : !isClicked, 'orbit clicked' : isClicked }" id="asteroid-belt" >
+    <div 
+      :class="{ orbit : !isClicked, 'orbit clicked' : isClicked }" 
+      :id="`asteroid-belt${ animation ? '-paused' : '' }`" 
+    >
       <img class="image" @click="clickHandler" :src="image" alt="asteroid belt" />
     </div>
 

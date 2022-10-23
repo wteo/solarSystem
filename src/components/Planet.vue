@@ -43,7 +43,11 @@ export default defineComponent({
       required: true,
       type: [Number, String]
     },
-    hide: {
+    visibility: {
+      required: true,
+      type: Boolean
+    },
+    animation: {
       required: true,
       type: Boolean
     }
@@ -77,8 +81,8 @@ export default defineComponent({
       </div>
     </Description>
   </Transition>
-  <div :id="orbit" :class="{ 'orbit visible' : !hide, 'orbit hidden' : hide }">
-    <div :id="planet" :class="{ planet : !isClicked, 'planet clicked' : isClicked }">
+  <div :id="`${ orbit }${ animation ? '-paused' : '' }`" :class="[ visibility ? 'orbit hidden' : 'orbit visible' ]">
+    <div :id="planet" :class="{ planet : !isClicked, 'planet clicked' : isClicked}">
       <img class="image" @click="clickHandler" :src="imgLink" :alt="planet" />
     </div>
   </div> 
