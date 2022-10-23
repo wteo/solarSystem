@@ -34,10 +34,41 @@ export default defineComponent({
     <Planets :hide="isHidden" />
     <AsteroidBelt />
   </div>
+  <div id="play-box">
+    <audio controls autoplay>
+      <source src="./audio/alone.mp3" type="audio/mpeg">
+      Your browser doesn't support the audio element.
+    </audio>
+  </div>
 
 </template>
 
 
 <style lang="scss">
   @import '@/scss/main.scss';
+
+  #play-box {
+
+    height: 85px;
+    position: fixed;
+    bottom: -20px;
+    left: 20px;
+    z-index: 200;
+    width: 95%;
+    transition: all 0.5s;
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+      transform: translateY(-20px);
+      cursor: pointer;
+    }
+
+    audio {
+      height: 15px;
+      width: 100%;
+      margin-top: 50px;
+    }
+  }
+
 </style>
