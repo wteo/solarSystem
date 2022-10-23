@@ -42,6 +42,10 @@ export default defineComponent({
     moonCount: {
       required: true,
       type: [Number, String]
+    },
+    hide: {
+      required: true,
+      type: Boolean
     }
   },
   components: { Description },
@@ -73,7 +77,7 @@ export default defineComponent({
       </div>
     </Description>
   </Transition>
-  <div :id="orbit" class="orbit">
+  <div :id="orbit" :class="{ 'orbit visible' : !hide, 'orbit hidden' : hide }">
     <div :id="planet" :class="{ planet : !isClicked, 'planet clicked' : isClicked }">
       <img class="image" @click="clickHandler" :src="imgLink" :alt="planet" />
     </div>

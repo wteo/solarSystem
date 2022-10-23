@@ -9,6 +9,7 @@ export default defineComponent({
         isSettingsClicked: false,
         isVisible: false,
         image: settings,
+        play: false,
     }
   },
   methods: {
@@ -17,6 +18,10 @@ export default defineComponent({
     },
     orbitHandler() {
       this.isVisible = !this.isVisible;
+      this.$emit('clicked', this.isVisible)
+    },
+    animationHandler() {
+        this.play = !this.play;
     }
   }
 })
@@ -33,17 +38,24 @@ export default defineComponent({
       <ul v-if="isSettingsClicked" id="menu">
         <li>
           <span class="settings-label">Orbit</span>
-          <div @click="orbitHandler" id="visibility-options">
-            <span id="on" v-if="isVisible">On</span>
-            <span id="off" v-if="!isVisible">Off</span>
+          <div @click="orbitHandler" class="options">
+            <span class="on" v-if="isVisible">On</span>
+            <span class="off" v-if="!isVisible">Off</span>
           </div>
         </li>
         <li>
           <span class="settings-label">Speed</span>
-          <div id="speed-options">
-            <span>Slow</span>
-            <span>Normal</span>
-            <span>Fast</span>
+          <div class="options">
+            <span class="speed">Slow</span>
+            <span class="speed">Normal</span>
+            <span class="speed">Fast</span>
+          </div>
+        </li>
+        <li>
+          <span class="settings-label">Animation</span>
+          <div @click="animationHandler" class="options">
+            <span class="on" v-if="play">Continue</span>
+            <span class="off" v-if="!play">Pause</span>
           </div>
         </li>
       </ul>
@@ -57,9 +69,16 @@ export default defineComponent({
 
   @import '@/scss/helpers/variables';
 
-  .orbit {
+  .visible {
     border: $orbit-border;
   }
+
+  .seen {
+    border: $orbit-hidden;
+  }
+
+  $selected: rgb(255, 255, 255);
+  $notSelected: gray;
 
   nav {
 
@@ -77,7 +96,7 @@ export default defineComponent({
     ul {
 
       list-style-type: none;
-      border: 1px solid white;
+      border: 1px solid $font-color;
       background-color: $space-background-color;
       padding: 10px;
       border-radius: 5px;
@@ -87,32 +106,31 @@ export default defineComponent({
         flex-direction: row;
 
         .settings-label {
-            width: 10vw;
+            width: 15vw;
         }
 
-        #visibility-options {
-          margin-left: 1vw;
+        .options {
 
-          &:hover {
-            cursor: pointer;
-          }
-          #on {
-            color: greenyellow;
-          }
-          #off {
-            color: rgb(131, 64, 64);
-          }
-        }
-
-        #speed-options {
-            
             span {
                 margin-left: 1vw;
-                color: rgb(146, 146, 146);
-                transition: all 0.1s;
-
+                color: $notSelected;
                 &:hover {
-                    color: greenyellow;
+                    cursor: pointer;
+                }
+            }
+
+            .on {
+                color: $selected;
+            }
+
+            .off {
+                color: $notSelected;
+            }
+
+            .speed {
+                transition: all 0.2s;
+                &:hover {
+                    color: $selected;
                 }
             }
         }
@@ -121,6 +139,7 @@ export default defineComponent({
 
     #settings {
       width: 20px;
+      cursor: pointer;
     }
   }
 

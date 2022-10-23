@@ -33,6 +33,12 @@ export default defineComponent({
         planets: [] as Planet[],
       }
     },
+    props: {
+      hide: {
+        required: true,
+        type: Boolean
+      }
+    },
     components: { Planet },
     methods: {
       
@@ -100,6 +106,7 @@ export default defineComponent({
     :volume="planet.volume"
     :surfaceArea="planet.surfaceArea"
     :moonCount="planet.moonCount"
+    :hide="hide"
   />
 
 </template>

@@ -10,17 +10,28 @@ import Planets from './components/Planets.vue';
 import AsteroidBelt from './components/AsteroidBelt.vue';
 
 export default defineComponent({
+  data() {
+    return {
+      isHidden: false,
+    }
+  },
   components: { Settings, Description, Sun, Planets, AsteroidBelt },
+  methods: {
+    onHide(value: boolean) {
+      console.log(value);
+      this.isHidden = value;
+    }
+  },
 })
 
 </script>
 
 <template>
 
-  <Settings />
+  <Settings @clicked="onHide"/>
   <div class="solarSystemContainer">
     <Sun />
-    <Planets />
+    <Planets :hide="isHidden" />
     <AsteroidBelt />
   </div>
 
