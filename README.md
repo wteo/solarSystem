@@ -5,7 +5,7 @@ Want to learn more about the Solar System? You can do it right here in this educ
 Link: 
 https://thesolarsystem.world/
 
-Summary: 
+<strong>Summary: </strong>
 <br/>
 Language: TypeScript
 <br/>
