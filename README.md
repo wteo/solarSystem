@@ -5,6 +5,12 @@ Want to learn more about the Solar System? You can do it right here in this educ
 Link: 
 https://thesolarsystem.world/
 
+Summary: 
+Language: TypeScript
+CSS Framework: Sass
+UI Framework: VueJS
+Version: 1.0.0
+
 <br/>
 
 <h2>About</h2>
