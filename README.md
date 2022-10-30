@@ -6,12 +6,15 @@ Learn about the Solar System here!
 
 Created with VueJS. I created this app to learn more about CSS animations and Sass.
 
+<br/>
+<br/>
 
 <h3>How to navigate?</h3>
 
 For aesthetic reasons, especially with the rule of thirds, I intentionally placed the centre position of the Solar System (aka the Sun) one-third from the left of the screen. 
 
 ![image](https://user-images.githubusercontent.com/87306585/198903895-a82832fd-25d9-47d6-9dd2-bc12ff188fbc.png)
+<br/>
 (Preview of the Solar System)
 
 While the size and position of the Solar System will adjust in accordance with the size of your screen, for the best experience, I strongly recommend viewing the app in a large, landscape screen.
@@ -19,10 +22,13 @@ While the size and position of the Solar System will adjust in accordance with t
 If you click on any of the planets, Sun or Asteroids, a description box will appear giving you basic details of that selected object
 
 ![image](https://user-images.githubusercontent.com/87306585/198904002-6a7788b8-397f-479b-ab9a-56123a59896e.png)
+<br/>
 (A basic description of our planet Earth)
 
 You can close this description box by clicking on the same object or hit the close button on the top-right corner of the box.
 
+<br/>
+<br/>
 
 <h3>Settings</h3>
 
@@ -39,4 +45,5 @@ The app also hides a music visualizer at the bottom of the screen. If this is yo
 By hovering your mouse over the bottom screen, you can unhide the music visualizer, which allows you to pause, play or resume music.
 
 ![image](https://user-images.githubusercontent.com/87306585/198904199-66c44c44-9ab6-41f3-a1f5-24bed84d7862.png)
+<br/>
 
