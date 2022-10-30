@@ -57,7 +57,24 @@ Because there are multiple planets involved, I knew I would be repeating the sam
 
 To reduce the length of the code, I installed Sass. This allows me to group CSS key properties into reusable codes in the form of a Mixin. I listed the values of each planet in a variable and then loop through these values by calling on the Mixin.
 
-And instead of using good old JavaScript, I decide to use TypeScript as I am still learning this language at the time I am building this project.
+And instead of using good old JavaScript, I decide to use TypeScript as I was still learning this language when I first built this project and I wanted to have an idea how does it fit with a framework like VueJS.
+
+Instead of hard coding the details of the Solar System, I wanted to fetch data from an existing API. However, there wasn’t anything suitable for me. Hence, I created a mock API using Beecepter.
+
+You can find the endpoint here:
+
+https://solarsystem.free.beeceptor.com/v1
+
+<br/>
+
+<h3>Closing Thoughts</h3>
+
+Whilst the project started with the intention of experimenting and understanding the fundamentals of CSS animations, it has expanded my experience beyond just design, style, and animations. At the time of building this project, I already had a basic understanding of React. By using VueJS, this project has helped my overall understanding of UI Frameworks. Whilst there may be differences between each UI Framework / Library, at their very core, they all have the same fundamentals such as components and props.
+
+I consider this app as representable enough for any student to use to learn more about our Solar System. Even so, I have plans to continue expanding this project. Some examples include:
+
+1.	Adding more features to the settings like slowing down and/or speeding up the animation; and
+2.	Adding more details to the description box for each of the planets like gravity, rotation, and diameter.
 
 <br/>
 
