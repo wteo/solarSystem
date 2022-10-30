@@ -6,9 +6,13 @@ Link:
 https://thesolarsystem.world/
 
 Summary: 
+<br/>
 Language: TypeScript
+<br/>
 CSS Framework: Sass
+<br/>
 UI Framework: VueJS
+<br/>
 Version: 1.0.0
 
 <br/>
