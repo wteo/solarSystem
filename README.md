@@ -3,7 +3,6 @@
 Learn about the Solar System here!
 
 <br/>
-<br/>
 
 <h2>About</h2>
 
@@ -11,7 +10,6 @@ To quickly set up this project, I chose VueJS. I have also chosen this framework
 
 The core focus of this project is on its design, style, and animations, with the intention of experimenting and understanding the fundamentals of CSS Animations and less on JavaScript framework. I wanted to create an app that has animations that could go on indefinitely. And thus, I figured an educational and interactive environment like the Solar System would be the ideal fit.
 
-<br/>
 <br/>
 
 <h3>How to navigate?</h3>
@@ -33,7 +31,6 @@ If you click on any of the planets, Sun or Asteroids, a description box will app
 You can close this description box by clicking on the same object or hit the close button on the top-right corner of the box.
 
 <br/>
-<br/>
 
 <h3>Settings</h3>
 
@@ -53,7 +50,6 @@ By hovering your mouse over the bottom screen, you can unhide the music visualiz
 <br/>
 
 <br/>
-<br/>
 
 <h3>The Technicalities</h3>
 
@@ -63,7 +59,6 @@ To reduce the length of the code, I installed Sass. This allows me to group CSS 
 
 And instead of using good old JavaScript, I decide to use TypeScript as I am still learning this language at the time I am building this project.
 
-<br/>
 <br/>
 
 
