@@ -2,7 +2,7 @@
 
 Learn about the Solar System here!
 
-<h1>About</h1>
+<h2>About</h2>
 
 Created with VueJS. I created this app to learn more about CSS animations and Sass.
 
