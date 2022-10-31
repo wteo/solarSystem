@@ -48,7 +48,7 @@ export default defineComponent({
         <li>
           <span class="settings-label">Animation</span>
           <div @click="animationHandler" class="options">
-            <span class="on" v-if="play">Continue</span>
+            <span class="on" v-if="play">Resume</span>
             <span class="off" v-if="!play">Pause</span>
           </div>
         </li>
