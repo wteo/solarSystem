@@ -3,7 +3,7 @@
 Want to learn more about the Solar System? You can do it right here in this educational and interactive Solar System environment!
 
 Link: 
-https://thesolarsystem.world/
+https://solar-system-world.netlify.app/
 
 <strong>Summary: </strong>
 <br/>
